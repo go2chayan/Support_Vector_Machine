@@ -1,7 +1,8 @@
 README
 ======
 
-I did it as a part of homework problem in the Machine Learning class taught by Prof Daniel Gildea (https://www.cs.rochester.edu/~gildea/) in Spring 2014. In this code, I solved the primal problem of Support Vector
+I did it as a part of homework problem in the Machine Learning class taught by Prof Daniel Gildea 
+(https://www.cs.rochester.edu/~gildea/) in Spring 2014. In this code, I solved the primal problem of Support Vector
 Machine (SVM) using Stochastic Gradient Descent (SGD).
 ==========================================================================================================
 
