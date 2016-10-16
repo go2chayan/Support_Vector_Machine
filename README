@@ -1,0 +1,55 @@
+README
+======
+
+I did it as a part of homework problem in the Machine Learning class taught by Prof Daniel Gildea (https://www.cs.rochester.edu/~gildea/) in Spring 2014.
+===============================================
+
+Name: Md. Iftekhar Tanveer
+Email: itanveer@cs.rochester.edu  or  go2chayan@gmail.com
+Course: CS446
+Homework: Implement SVMs with SGD for the voting dataset, and compare results with the previous assignment. 
+	Use the dev set to experiment with different values of the capacity parameter C and the learning rate.
+
+
+************** Files ***************
+README: This document
+progAss2.py: The original python script. Just run the file using python. The main function will automatically called.
+voting2.dat: Dataset file
+
+************* Algorithm ************
+1. repeat
+2. for n = 1, ... N
+3. if 1 - y(n)w'x(n) + b > 0
+4.		w = w - eta*(1/N w - C*y(n)*x(n))
+5. 		b = b - eta*(C/N)
+6. else
+7. 		w = w - eta*(w/N)
+8. eta = eta0/time 
+
+
+************* Results **************
+Accuracy is ~89% ... (may change in each run due to random sampling)
+To be honest, there is not much improvement from the last attempts.
+Earlier, I got about 88% accuracy. Now it looks like 89% but sometimes,
+it performs worse
+
+************* Interpretations *****
+I have noticed that low values of C gives better accuracy in test set.
+May be it is because low C allows wider margin which eventually increases the accuracy
+for unknown sample.
+
+I tried random shuffling the data but looks like thats not a good
+thing to do because in that case I am comparing the C and eta
+on a variable basis. That means it is not legitimate to compare those
+values anymore if I shuffle the dataset.
+
+I tried many different maximum iteration. But looks like using a large max iteration
+in fact reducing the accuracy
+
+************* References ************
+I used exponential grid search for C and learning rate. The idea of exponential grid
+is actually borrowed from this libSVM tutorial:
+http://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf
+
+
+
